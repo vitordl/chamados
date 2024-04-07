@@ -17,7 +17,13 @@
         </x-auth-logo>
 
         <div>
-            <form action="{{route('authRegister')}}" method="get" class="w-full">
+            <form action="{{route('register.store')}}" method="post" class="w-full">
+                @csrf
+                <label for="user">Nome</label>
+                <div class="text-black mb-4 mt-1">
+                    <x-input-form type="text" name="name" id="name" />
+                </div>
+
                 <label for="user">Usuário</label>
                 <div class="text-black mb-4 mt-1">
                     <x-input-form type="text" name="user" id="user" />

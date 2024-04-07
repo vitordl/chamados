@@ -16,7 +16,8 @@
         </x-auth-logo>
 
         <div>
-            <form action="{{route('authLogin')}}" method="get" class="w-full">
+            <form action="{{route('authenticate')}}" method="post" class="w-full">
+                @csrf
                 <label for="user">Usuário</label>
                 <div class="text-black mb-4 mt-1">
                     <x-input-form type="text" name="user" id="user" />
@@ -33,7 +34,13 @@
             </form>
 
             <div>
-                <x-input-link href="{{route('register')}}">Ainda não é registrado?</x-input-link>
+                <x-input-link href="{{route('register.index')}}">Ainda não é registrado?</x-input-link>
+            </div>
+
+            <div class="mt-3 text-red-500 text-sm">
+                @if(session('erro'))
+                    {{session('erro')}}
+                @endif
             </div>
         </div> 
     </div>

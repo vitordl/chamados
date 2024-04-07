@@ -16,6 +16,12 @@
                     <li><a href="" class="hover:text-emerald-500">Ipsun</a></li>
                     <li><a href="" class="hover:text-emerald-500">Sit</a></li>
                     <li><a href="" class="hover:text-emerald-500">Amet</a></li>
+
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf 
+                        <input type="submit" value="Logout" class="hover:text-emerald-500">
+                    </form>
+                    
                 </ul>
             </div>
         </div>
@@ -32,24 +38,6 @@
 
 
 {{-- LAYOUT MOBILE  --}}
-{{-- <div class="md:hidden bg-zinc-800 p-6 ">
-    
-    <div class="flex items-center gap-8 text-white justify-between">
-        <div class="text-lg uppercase font-light">
-            <a href="{{route('index')}}" class="flex gap-1 items-center">
-            <x-icon-menu/>
-            Chamados Aqui
-            </a>
-        </div>
-
-        <div class="flex items-center">
-            <button>
-                <x-icon-hamburger/>
-            </button>
-        </div>
-
-    </div>
-</div> --}}
 
 <div class="flex items-center justify-between flex-wrap  bg-zinc-900 text-white p-6 md:hidden  w-full">
     <div class="flex items-center flex-shrink-0 text-white">
