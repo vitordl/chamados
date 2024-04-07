@@ -1,8 +1,8 @@
-
+<h3>git clone https://github.com/vitordl/chamados</h3>
 <h3>composer install</h3>
 <h3>copy .env.example .env</h3>
 <h3>php artisan key:generate</h3>
-
+<h3>php artisan migrate</h3>
 
 
 
