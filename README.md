@@ -1,6 +1,7 @@
-<h2>composer install</h2>
-<h2>copy .env.example .env</h2>
-<h2>php artisan key:generate</h2>
+
+<h3>composer install</h3>
+<h3>copy .env.example .env</h3>
+<h3>php artisan key:generate</h3>
 
 
 
