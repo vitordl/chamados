@@ -3,6 +3,8 @@
 <h3>copy .env.example .env</h3>
 <h3>php artisan key:generate</h3>
 <h3>php artisan migrate</h3>
+<h3>npm install</h3>
+<h4>npm run dev</h4>
 
 
 
