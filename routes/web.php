@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Livewire\Main;
@@ -28,6 +28,9 @@ Route::middleware('auth')->group(function(){
 
 Route::middleware('guest')->group(function(){
     Route::resource('register', RegisterController::class);
+
+    Route::get('token', [RegisterController::class, 'token'])->name('token');
+    Route::post('reg_token', [RegisterController::class, 'reg_token'])->name('reg_token');
     
     Route::get('/login', function(){
         return view('auth.login');

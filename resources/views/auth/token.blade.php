@@ -16,7 +16,8 @@
         </x-auth-logo>
 
         <div>
-            <form action="{{route('register')}}" method="get" class="w-full">
+            <form action="{{route('reg_token')}}" method="post" class="w-full">
+                @csrf
                 <p class="text-center text-emerald-500 border border-emerald-500 border-opacity-5 mb-10 rounded shadow-lg shadow-emerald-500">Um token foi enviado para o e-mail cadastrado!</p>
                 <label for="token">Token</label>
                 <div class="text-black mb-4 mt-1">
@@ -30,6 +31,12 @@
 
                 </div>
             </form>
+
+            <div class="mt-3 text-red-500">
+                @if(session('token_err'))
+                    {{session('token_err')}}
+                @endif
+            </div>
 
 
         </div> 
